@@ -1,14 +1,15 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOSTNAME'] %>
+  pool: 5
 
 development:
   <<: *default
-  database: skore_development
+  host: <%= ENV['DB_HOSTNAME'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  port: 5432
 
 test:
   <<: *default

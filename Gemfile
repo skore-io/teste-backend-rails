@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.6'
+ruby '2.6.6'
 
 gem 'rails', '5.0.0'
 gem 'actionpack', '5.0.0'
@@ -12,6 +12,8 @@ group :development, :test do
   gem 'byebug', '9.0.6'
   gem 'listen', '3.4.1'
   gem 'spring', '2.0.2'
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  gem 'factory_bot_rails'
 end
 
 group :test do
