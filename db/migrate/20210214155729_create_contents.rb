@@ -7,8 +7,8 @@ class CreateContents < ActiveRecord::Migration[5.0]
       t.string :media_type
       t.string :provider_id
       t.datetime :expires_at
-      t.boolean :watched
-      t.boolean :expired
+      t.boolean :watched, default: false, null: false
+      t.boolean :expired, default: false, null: false
 
       t.timestamps
     end

@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20210214155729) do
     t.string   "media_type"
     t.string   "provider_id"
     t.datetime "expires_at"
-    t.boolean  "watched"
-    t.boolean  "expired"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "watched",     default: false, null: false
+    t.boolean  "expired",     default: false, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
